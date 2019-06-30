@@ -34,16 +34,18 @@ def do_search()->str:
 		the_phrase=phrase,the_letters=letters,the_results=results)
 
 @app.route('/viewlog')
-def view_the_log()->'html':
+def view_the_log() -> 'html':
 	contents = []
 	with open('vsearch.log') as log:
 		for line in log:
 			contents.append([])
 			for item in line.split('|'):
 				contents[-1].append(escape(item))
-	titles = {'form date','remote_addr','user_agent','results'}
-	return render_template('viewlog.html',the_title = 'view log',the_row_titles = 'titles',the_data = 'contents',)
-
+	titles = ('Form Date','Remote_addr','User_agent','Results')
+	return render_template('viewlog.html',
+							the_title = 'view log',
+							the_row_titles = titles,
+							the_data = contents)
 
 if __name__ == '__main__':
 	app.run(debug = True) 

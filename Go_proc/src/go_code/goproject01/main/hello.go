@@ -16,6 +16,21 @@ func main(){
 
   myVar, name := 19971010, "Rebecca"
   fmt.Println(name, ":", myVar)
+
+  // int8 int16 int32 int64
+  // uint8 uint16 uint32 uint64
+  // 测试一下int8的范围
+
+  // 变量不能超过数据类型的范围
+  var testNum  int8= -127  // 不能超过int8的范围
+  fmt.Println("signed num = ",testNum)
+  var testNum2  uint8= 255   // 不能超过uint8的范围
+  fmt.Println("unsigned num = ",testNum2)
+
+  // uint、int 默认为有符号 且和计算机实现有关
+  var mychar byte= 'a' 
+  fmt.Println("mychar : ",mychar)
+
 }
 
 

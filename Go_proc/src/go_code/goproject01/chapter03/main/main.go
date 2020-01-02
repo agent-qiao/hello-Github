@@ -9,5 +9,12 @@ import(
 func main(){
     // fmt.Println(package1.name_package1) 
     // 不能被导入且访问
-    fmt.Println(package1.Name_package1)
+    fmt.Println("the var is exsited in package1 ",package1.Name_package1)
+
+    // 取模的计算举例 %
+    // 取模的公式 a % b = a - a / b * b
+    fmt.Println(" 10 %  3 =",10%3)
+    fmt.Println("-10 %  3 =",-10%3)
+    fmt.Println(" 10 % -3 =",10%-3)
+    fmt.Println("-10 % -3 =",-10%-3)
 }
